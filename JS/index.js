@@ -1,0 +1,1 @@
+var cant_kWh = document.getElementById("kWh");
