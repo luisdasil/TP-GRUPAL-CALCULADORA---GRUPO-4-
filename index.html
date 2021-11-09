@@ -6,57 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Tarifa</title>
     <link rel="stylesheet" href="./CSS/index.css">
+    <script src="JS/index.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img class="logo-site" src="./img/logo-epe-blanco-nuevo.png" alt="Home" >
-            <ul>
-            <li><a href="">algo1</a></li>
-            <li><a href="">algo2</a></li>
-            <li><a href="">algo3</a></li>
-            </ul>
+            <div>
+                <img class="logo-site" src="./img/logo-epe-blanco-nuevo.png" alt="Home" >
+            </div>
         </nav>
     </header>
-    <main id="imagen">
-    
+
+    <main class="funcion-main">
+        <section>
+        <div class="form-calculadora">
+            <h2> Calcular Consumo </h2>
+                <form class="calculadora" id = "calculadora">
+                    <hr>
+                    <div class = "tipo-de-usuario">
+                        <input type="radio" id="radio-1" name="account" checked/>
+                        <label for="radio-1" class="radio" chec>Residencial</label>
+                        <input type="radio" value="None" id="radio-2" name="account"/>
+                        <label for="radio-2" class="radio">Industrial</label>
+                    </div>
+                    <hr>
+                    <label for="domicilio"><img src = "./img/entrega-de-comida.png" width="30px">Domicilio</label>
+                    <select class="domicilio">
+                        <option value="Distrito-Centro" id="Distrito-Centro">Distrito Centro</option>
+                        <option value="Distrito-Zur" id="Distrito-Zur">Distrito Zur</option>
+                        <option value="Distrito-Oeste" id="Distrito-Oeste">Distrito Oeste</option>
+                        <option value="Distrito-Norte" id="Distrito-Norte">Distrito Norte</option>
+                    </select>
+                    <hr>
+                    <label for="" >Cantidad de kWh del mes</label>
+                    <input type = "number" id="kWh">
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
-    <div class="grid-container">
-        <div  class="grid-item-1"> 
-        
-        </div>
-        <div    class="grid-item-2">
-            <p>GUÍA DE TRÁMITES E INFORMACIÓN</p>
-            <h1>Calculadora</h1>
-        </div>
-    </div>
-    <div    class="form-calculadora">
-    <h2> Calcular blabla </h2>
-        <form class="calculadora" >
-            <hr>
-            <div class = "tipo-de-usuario">
-                <input type="radio" id="radio-1" name="account" checked/>
-                <label for="radio-1" class="radio" chec>Residencial</label>
-                <input type="radio" value="None" id="radio-2" name="account"/>
-                <label for="radio-2" class="radio">Industrial</label>
-            </div>
-            <hr>
-            <label for="domicilio"><img src = "./img/entrega-de-comida.png" width="30px">Domicilio</label>
-            <select class="domicilio">
-                <option value="Distrito-Centro">Distrito Centro</option>
-                <option value="Distrito-Zur">Distrito Zur</option>
-                <option value="Distrito-Oeste">Distrito Oeste</option>
-                <option value="Distrito-Norte">Distrito Norte</option>
-            </select>
-            <hr>
-            <label for="" >Cantidad de kWh del mes</label>
-            <input type = "number">
+    
 
-            </div>
-
-        </form>
-
-    </div>
 
 </body>
 </html>
