@@ -1,29 +1,40 @@
+
+
 body {
     margin: 0;
     padding: 0;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: linear-gradient(to right, rgba(36, 36, 62, 0.623), rgba(48, 43, 99, 0.603), #0f0c29), url(/img/backgraund-index.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:inline-block;
 }
 
-/*Navbar*/
+/*text*/
+.text{
+    height: auto;
+    width: 300px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 108px;
+    margin-left: 30px;
+    background-color: #000000ad;
 
-nav {
-    display: flex;
-    background-color: #0757a1ce;
-    width: 100%;
-    height: 100%;
 }
 
 /*Calculadora*/
 
 .form-calculadora{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 400px;
-    width: 500px; 
-    height: 300px;  
-    border-radius: 8px; 
-    background-color: #ebebeb; 
+    margin-top: none;
+    margin-left: 700px;
+    width: 600px; 
+    height: 800px;  
+    border-radius: 8px/7px; 
+    background-color: #ffffff63; 
     box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     border: solid 1px #cbc9c9;
+    color: aliceblue;
 }
 
 .form-calculadora h2{
@@ -41,16 +52,19 @@ input[type=radio] {
 
 form{ 
     margin: 10px;
+    animation: both;
+    animation-duration: 2s;
 }
 
 label.radio {
     cursor: pointer;
-    text-indent: 30px;
+    text-indent: 40px;
+    font-size: 20px;
     text-align: center;
     display: inline-block;
     position: relative;
-    margin-bottom: 10px;
-    margin-left: 1px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 label.radio:before {
@@ -92,17 +106,44 @@ hr{
     opacity: 0.3;
 }
 
-/*Footer*/
+.zona-domicilio{
+    margin-top: 90px;
+    margin-bottom:90px;
+    text-align: center;
+    font-size: larger;
+}
+select.domicilio{
+    border-radius: 5px;
+}
+.cantidad-kWh{
+    text-indent: 10px ;
+}
+.cantidad-kWh input{
+    text-align: center;
+    width: 300px;
+    border-bottom: 1px solid rgba(7, 7, 7, 0.596) !important;
+}
 
+.button-submit{
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    margin-top: 108px;
+    margin-left: 150px;
+}
+
+/*Footer*/
+/*
 footer {
-    width: 100%;
-    height: 100%;
+    margin-top:100%;
+    width: auto;
+    height: auto;
     background-color: #0757a1ce;
     color: #252424;
     font-size: 20px;
     text-align: center;
     padding: 5px;
 }
-
+*/
 
 
