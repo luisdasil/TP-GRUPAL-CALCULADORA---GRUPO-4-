@@ -3,38 +3,55 @@ body {
     padding: 0;
     background: #0f0c29;  /* fallback for old browsers */
     background: linear-gradient(to right, rgba(36, 36, 62, 0.623), rgba(48, 43, 99, 0.603), #0f0c29), url(../img/backgraund-index.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     display:inline-block;
-    height: auto;
+    height: 861px;
     max-width: 75%;
-    max-height: 100%;
-    display: flex; 
+    display: flex;
     align-content: flex-end;
+    overflow: hidden;
+}
+
+/*Info sobre los campos a validar*/
+
+.text{
+    width: 600px;
+    height: auto;
+    color: white;
+    text-align: static;
+    margin-top: 18px;
+    margin-left: 30px;   
+    background-color:transparent;
 }
 
 
-/*text-ubicacion-tel-mail-*/
-.text{
-    height: 500px;
-    width: 800px;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 18px;
-    margin-left: 30px;
-    background-color: #000000a9;
+.text h1 {text-align: center}
 
+
+.text article{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.text li{
+    font-size: 20px;
+}
+
+.text p{
+    font-size: 15px;
+    padding: 3px;
 }
 
 /*Calculadora*/
 
 .form-calculadora{
     display: block;
-    margin-top: 18px;
-    margin-left: 500px;
+    margin-top: 180px;
+    margin-left:100px;
     width: 600px;
-    height: 800px;  
+    height: 641px;
     border-radius: 8px/7px; 
     background-color: #ffffff63; 
     box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
@@ -42,16 +59,9 @@ body {
     color: aliceblue;
 }
 
+
 .form-calculadora h2{
     text-align: center;
-}
-
-.tipo-de-usuario{
-    margin-left: 90px;
-}
-
-input[type=radio] {
-    visibility: hidden;
 }
 
 
@@ -60,6 +70,18 @@ form{
     animation: both;
     animation-duration: 2s;
 }
+
+/* tipo de usuario */
+
+.tipo-de-usuario{
+    margin-left: 90px;
+}
+
+
+input[type=radio] {
+    visibility: hidden;
+}
+
 
 label.radio {
     cursor: pointer;
@@ -72,8 +94,9 @@ label.radio {
     margin-bottom: 100px;
 }
 
+
 label.radio:before {
-    background: #055cad;
+    background: rgba(36, 36, 62, 0.959);
     content:'';
     position: absolute;
     top:2px;
@@ -82,6 +105,7 @@ label.radio:before {
     height: 20px;
     border-radius: 100%;
 }
+
 
 label.radio:after {
     opacity: 0;
@@ -102,14 +126,18 @@ label.radio:after {
     transform: rotate(-45deg);
 }
 
+
 input[type=radio]:checked + label:after {
     opacity: 1;
 }
+
 
 hr{
     color: #a9a9a9;
     opacity: 0.3;
 }
+
+/* seleccion de domicilio */
 
 .zona-domicilio{
     margin-top: 90px;
@@ -117,28 +145,79 @@ hr{
     text-align: left;
     font-size: larger;
 }
+
+
 select.domicilio{
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
+/* gasto mensual de KWH */
 
 .cantidad-kWh input{
-    text-align: center !important;
-    width: 300px;
-    border-bottom: 1px solid rgba(7, 7, 7, 0.596) !important;
+    text-align: start;
+    color:#ffffff;
+    width: 100%;
+    height: 25px;
+    border: none ;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(7, 7, 7, 0.26) !important;
+    margin-top: 18px;
 }
 
-.button-submit{
-    border-radius: 5px;
-    width: 100px;
-    height: 30px;
-    margin-top: 108px;
-    margin-left: 100px;
-    text-align: center !important;
+
+::placeholder{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/* Boton para calcular */
+
+.tooltip-red {  /*cuadro de texto rojo*/
+    --balloon-color: rgba(255, 0, 0, 0.411);
+}
+
+.tooltip-big-text { 
+    --balloon-font-size: 20px;
+}
+
+.tooltip-slide {
+    --balloon-move: 30px;
+}
+
+
+.button-calcular{ /*posicionar en el medio*/
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 150px ;
+    height: 35px;
+}
+
+button {background-image: linear-gradient(to right, #24243e 0%, #484566 51%, #0f0c29 100%)}  /* color del boton */
+button {   
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+button:hover {
+   background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 /*Footer*/
+
 .logo-site{
     width: 100px;
 }
@@ -151,9 +230,11 @@ footer {
     bottom: 0;
     margin-top: 2000px;
     width: 100%;
+    height: 116px;
     display: inline-block;
     align-content: space-around ;
 }
+
 
 footer p{
     text-align: center;
