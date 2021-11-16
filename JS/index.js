@@ -83,4 +83,5 @@ function validateForm() {
         alert("Ingrese un valor de consumo valido");
         return false;
     }
+    return false;
 }

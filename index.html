@@ -44,15 +44,15 @@
                     <form class="calculadora" id="calculadora"  onsubmit="return validateForm()" >
                         <!--Seleccion del tipo de usuario-->
                         <div class="tipo-de-usuario">
-                            <input type="radio" id="radio-1" name="account" checked />
+                            <input type="radio" id="radio-1" name="account"/>
                             <label for="radio-1" class="radio" check>Residencial</label>
                             <input type="radio" value="None" id="radio-2" name="account" />
                             <label for="radio-2" class="radio">Industrial</label>
                         </div>
                         <!--Seleccion del domicilio-->
                         <label for="domicilio">Domicilio</label>
-                        <select class="domicilio">
-                            <option>                  <!--domicilio vacio-->                    </option>
+                        <select class="domicilio" id="domicilio">
+                            <option value="default" id="default" selected disabled hidden> <!--domicilio vacio--> </option>
                             <option value="Distrito-Centro" id="Distrito-Centro">Distrito Centro</option>
                             <option value="Distrito-Zur" id="Distrito-Zur">Distrito Zur</option>
                             <option value="Distrito-Oeste" id="Distrito-Oeste">Distrito Oeste</option>
