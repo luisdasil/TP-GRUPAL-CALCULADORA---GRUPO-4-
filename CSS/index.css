@@ -6,11 +6,10 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     display:inline-block;
-    height: 861px;
-    max-width: 75%;
+    height: 100%;
+    max-width: 100%;
     display: flex;
     align-content: flex-end;
-    overflow: hidden;
 }
 
 /*Info sobre los campos a validar*/
@@ -26,7 +25,9 @@ body {
 }
 
 
-.text h1 {text-align: center}
+.text h1 {
+    text-align: center
+}
 
 
 .text article{
@@ -48,7 +49,7 @@ body {
 
 .form-calculadora{
     display: block;
-    margin-top: 180px;
+    margin-top: 40px;
     margin-left:100px;
     width: 600px;
     height: 641px;
@@ -226,12 +227,11 @@ button:hover {
 footer {
     background: #0f0c29;  /* fallback for old browsers */
     background: linear-gradient(to right, rgba(36, 36, 62, 0.623), rgba(48, 43, 99, 0.603), #0f0c29);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    position: absolute;
     bottom: 0;
-    margin-top: 2000px;
+    margin-top: 200px;
     width: 100%;
     height: 116px;
-    display: inline-block;
+    display: block;
     align-content: space-around ;
 }
 
@@ -241,3 +241,5 @@ footer p{
     font-size: 20px;
     color: rgb(250, 250, 250);
 }
+
+
