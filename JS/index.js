@@ -1,71 +1,55 @@
-/* variable para Cantidad de kWh usados */
+/*Declaración de variables */
+let total = 0;
+const costoServicio = 102;
 
-var kWh = document.getElementById("kWh");
+const ivaResidencial = 0.21;
+const ivaIndustrial = 0.27;
 
+const precioCentro = 5.8;
+const precioZur = 5.4;
+const precioOeste = 5.35;
+const precioNorte = 5.6;
 
-/*Constante del iva recidencia e industrial*/
+/*Función del calculo */
 
-let ivaResidencial = 21;
-let ivaIndustrial = 27;
-
-/*Constante de la tarifa */
-
-let precioCentro = 5.80;
-let precioZur = 5.40;
-let precioOeste = 5.35;
-let precioNorte = 5.60;
-
-/*Funcion para el calculo industrial*/
-
-function calcular_industrial(kWh, ivaIndustrial, precioCentro, precioZur, precioOeste, precioNorte){
-    var total=0
-    if (document.getElementById("Distrito-Centro")){
-        total = kWh * precioCentro;
-        total = (total * ivaIndustrial) / 100;
+function calcular() {
+    const kWh = document.getElementById('kWh').value;
+    const zona = document.getElementById('domicilio').value;
+/*Calculo Residencial*/
+    if(document.getElementById('radio-1').checked) {
+        if(zona == "Distrito-Centro"){
+            total = costoServicio + (kWh * precioCentro) * (1 + ivaResidencial);
+        }
+        if(zona == "Distrito-Zur"){
+            total = costoServicio + (kWh * precioZur) * (1 + ivaResidencial);
+        }
+        if(zona == "Distrito-Oeste"){
+            total = costoServicio + (kWh * precioOeste) * (1 + ivaResidencial);
+        }
+        if(zona == "Distrito-Norte"){
+                total = costoServicio + (kWh * precioNorte) * (1 + ivaResidencial);
+        }
+/*Calculo Industrial */
+    }else {
+        if(zona == "Distrito-Centro"){
+            total = costoServicio + (kWh * precioCentro) * (1 + ivaIndustrial);
+        }
+        if(zona == "Distrito-Zur"){
+            total = costoServicio + (kWh * precioZur) * (1 + ivaIndustrial);
+        }
+        if(zona == "Distrito-Oeste"){
+            total = costoServicio + (kWh * precioOeste) * (1 + ivaIndustrial);
+        }
+        if(zona == "Distrito-Norte"){
+            total = costoServicio + (kWh * precioNorte) * (1 + ivaIndustrial);
+        }
     }
-    if (document.getElementById("Distrito-Zur")){
-        total = kWh * precioZur;
-        total = (total * ivaIndustrial) / 100;
-    }
-    if (document.getElementById("Distrito-Oeste")){
-        total = kWh * precioOeste;
-        total = (total * ivaIndustrial) / 100;
-    }
-    if (document.getElementById("Distrito-Norte")){
-        total = kWh * precioNorte;
-        total = (total * ivaIndustrial) / 100;
-    }
+
+    return document.getElementById('resultado').innerHTML = total;
+
 }
 
-/*Funcion para el calculo recidencial*/
-
-function calcular_recidencial(kWh, ivaResidencial, precioCentro, precioZur, precioOeste, precioNorte){
-    var total=0
-    if (document.getElementById("Distrito-Centro")){
-        total = kWh * precioCentro;
-        total = (total * ivaResidencial) / 100;
-    }
-    if (document.getElementById("Distrito-Sur")){
-        total = kWh * precioZur;
-        total = (total * ivaResidencial) / 100;
-    }
-    if (document.getElementById("Distrito-Oeste")){
-        total = kWh * precioOeste;
-        total = (total * ivaResidencial) / 100;
-    }
-    if (document.getElementById("Distrito-Norte")){
-        total = kWh * precioNorte;
-        total = (total * ivaResidencial) / 100;
-    }
-}
-
-
-
-
-/*
-Validacion formulario
-*/
-
+/*Validación del formulario*/
 function validateForm() {
     if (!(document.getElementById('radio-1').checked) && !(document.getElementById('radio-2').checked)) {
         alert("Seleccione tipo de usuario");

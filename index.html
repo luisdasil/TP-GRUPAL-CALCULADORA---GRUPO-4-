@@ -35,7 +35,7 @@
         </div>
                 <div class="form-calculadora animate__animated animate__backInRight  animate__slow">
                     <h2> Calcule su consumo </h2>
-                    <form class="calculadora" id="calculadora"  onsubmit="return validateForm()" >
+                    <form class="calculadora" id="calculadora"  onsubmit="validateForm()" >
                         <!--Seleccion del tipo de usuario-->
                         <div class="tipo-de-usuario">
                             <input type="radio" id="radio-1" name="account"/>
@@ -64,8 +64,10 @@
                                 data-balloon-length="medium"
                                 aria-label="Por favor, no olvides de rellenar todos los campos"
                                 data-balloon-pos="up"
+                                onclick="calcular()"
                                 >Calcular 
                             </button>
+                            <p id="resultado">Total</p>
                         </div>
                     </form>
                 </div>
