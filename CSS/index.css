@@ -1,27 +1,29 @@
 body {
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     background: #0f0c29;  /* fallback for old browsers */
     background: linear-gradient(to right, rgba(36, 36, 62, 0.623), rgba(48, 43, 99, 0.603), #0f0c29), url(../img/backgraund-index.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    display:inline-block;
-    height: 100%;
-    max-width: 100%;
-    display: flex;
-    align-content: flex-end;
+    height: auto;
+    max-width: auto;
 }
 
+
+
+main  {display: flex}
 /*Info sobre los campos a validar*/
 
 .text{
-    width: 600px;
+    width: 500px;
     height: auto;
     color: white;
     text-align: static;
-    margin-top: 18px;
-    margin-left: 30px;   
-    background-color:transparent;
+    margin-top: 50PX;
+    margin-left: 50px;
+    background-color:   transparent;
+    display: inline-block;
 }
 
 
@@ -48,16 +50,17 @@ body {
 /*Calculadora*/
 
 .form-calculadora{
-    display: block;
-    margin-top: 40px;
-    margin-left:100px;
-    width: 600px;
-    height: 641px;
+    margin-top: 200PX;
+    margin-left: 280px;
+    width: 500px;
+    height: auto;
     border-radius: 8px/7px; 
     background-color: #ffffff63; 
     box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     border: solid 1px #cbc9c9;
     color: aliceblue;
+    backdrop-filter: blur(12px);
+    display: inline-block;
 }
 
 
@@ -68,14 +71,12 @@ body {
 
 form{ 
     margin: 10px;
-    animation: both;
-    animation-duration: 2s;
 }
 
 /* tipo de usuario */
 
 .tipo-de-usuario{
-    margin-left: 90px;
+    margin-left: 80px;
 }
 
 
@@ -86,13 +87,13 @@ input[type=radio] {
 
 label.radio {
     cursor: pointer;
-    text-indent: 40px;
+    text-indent: 30px;
     font-size: 20px;
     text-align: center;
     display: inline-block;
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 
@@ -133,25 +134,28 @@ input[type=radio]:checked + label:after {
 }
 
 
-hr{
-    color: #a9a9a9;
-    opacity: 0.3;
-}
-
 /* seleccion de domicilio */
 
-.zona-domicilio{
-    margin-top: 90px;
+select{
+    margin-top: 10px;
     margin-bottom:90px;
-    text-align: left;
-    font-size: larger;
+    text-align: center;
+    font-size: 18px;
 }
 
 
 select.domicilio{
-    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid black !important;
+    background: transparent;
     margin-bottom: 10px;
+    width: 100%;
+    height: 20px;
+    color: rgb(255, 255, 255);
 }
+
+
+label   {font-size: 20px}
 
 /* gasto mensual de KWH */
 
@@ -163,13 +167,13 @@ select.domicilio{
     border: none ;
     background-color: transparent;
     border-bottom: 1px solid rgba(7, 7, 7, 0.26) !important;
-    margin-top: 18px;
+    margin-top: 50px;
 }
 
 
 ::placeholder{
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* Boton para calcular */
@@ -188,7 +192,7 @@ select.domicilio{
 
 
 .button-calcular{ /*posicionar en el medio*/
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -225,14 +229,14 @@ button:hover {
 
 
 footer {
-    background: #0f0c29;  /* fallback for old browsers */
-    background: linear-gradient(to right, rgba(36, 36, 62, 0.623), rgba(48, 43, 99, 0.603), #0f0c29);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: local;
     bottom: 0;
     margin-top: 200px;
     width: 100%;
-    height: 116px;
+    height: auto;
     display: block;
-    align-content: space-around ;
+    align-content: stretch;
+    backdrop-filter: blur(10px);
 }
 
 

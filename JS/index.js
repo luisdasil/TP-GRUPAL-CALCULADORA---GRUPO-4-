@@ -45,7 +45,7 @@ function calcular_recidencial(kWh, ivaResidencial, precioCentro, precioZur, prec
         total = kWh * precioCentro;
         total = (total * ivaResidencial) / 100;
     }
-    if (document.getElementById("Distrito-Zur")){
+    if (document.getElementById("Distrito-Sur")){
         total = kWh * precioZur;
         total = (total * ivaResidencial) / 100;
     }
