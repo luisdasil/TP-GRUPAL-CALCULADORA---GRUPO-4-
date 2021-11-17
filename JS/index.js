@@ -13,6 +13,7 @@ const precioNorte = 5.6;
 /*Función del calculo */
 
 function calcular() {
+    validateForm()
     const kWh = document.getElementById('kWh').value;
     const zona = document.getElementById('domicilio').value;
 /*Calculo Residencial*/
@@ -53,19 +54,20 @@ function calcular() {
 function validateForm() {
     if (!(document.getElementById('radio-1').checked) && !(document.getElementById('radio-2').checked)) {
         alert("Seleccione tipo de usuario");
-        return false;
+        return;
     }
 
 
     if(document.getElementById('domicilio').value == 'default') {
         alert("Seleccione un distrito");
-        return false;
+        return;
     }
     
 
     if(document.getElementById('kWh').value <= 0) {
         alert("Ingrese un valor de consumo valido");
-        return false;
+        return;
     }
-    return false;
+    return;
+
 }
