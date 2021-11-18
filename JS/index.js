@@ -46,7 +46,7 @@ function calcular() {
         }
     }
 
-    return document.getElementById('resultado').innerHTML = total;
+    return document.getElementById('resultado').innerHTML = total.toFixed(2);
 
 }
 
