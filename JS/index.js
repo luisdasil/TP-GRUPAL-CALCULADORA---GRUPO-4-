@@ -45,9 +45,9 @@ function calcular() {
             total = costoServicio + (kWh * precioNorte) * (1 + ivaIndustrial);
         }
     }
-
-    return document.getElementById('resultado').innerHTML = total.toFixed(2);
-
+    if(total > 102) {
+        return document.getElementById('resultado').innerHTML = total.toFixed(2);
+    }
 }
 
 /*Validación del formulario*/
