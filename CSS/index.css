@@ -155,7 +155,9 @@ select.domicilio{
 }
 
 
-label   {font-size: 20px}
+select.domicilio:focus{
+    background-color: #484566;
+}
 
 /* gasto mensual de KWH */
 
@@ -175,6 +177,8 @@ label   {font-size: 20px}
     color: rgb(255, 255, 255);
     font-size: 18px;
 }
+
+
 
 /* Boton para calcular */
 
@@ -220,6 +224,15 @@ button:hover {
     color: #fff;
     text-decoration: none;
 }
+
+
+
+.resultado{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
 
 /*Footer*/
 

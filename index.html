@@ -56,18 +56,26 @@
                             <br>
                         </div>
                         <!--Boton para realizar el calculo-->
-                        <div  class= "button-calcular"  >
-                            <button
-                                type="submit"
-                                value="Calcular"
-                                class="button-submit  tooltip-red"
-                                data-balloon-length="medium"
-                                aria-label="Por favor, no olvides de rellenar todos los campos"
-                                data-balloon-pos="up"
-                                onclick="calcular()"
-                                >Calcular 
-                            </button>
-                            <p id="resultado">Total</p>
+                        <div class="resultado">
+                            <div class="grid-1"> 
+                                <p >Total</p>
+                            </div>
+                            <div class="grid-2">
+                                <p id="resultado"></p>
+                            </div>
+                        </div>
+                            
+                            <div  class= "button-calcular"  >
+                                <button
+                                    type="submit"
+                                    value="Calcular"
+                                    class="button-submit  tooltip-red"
+                                    data-balloon-length="medium"
+                                    aria-label="Por favor, no olvides de rellenar todos los campos"
+                                    data-balloon-pos="up"
+                                    onclick="calcular()"
+                                    >Calcular 
+                                </button>
                         </div>
                     </form>
                 </div>
