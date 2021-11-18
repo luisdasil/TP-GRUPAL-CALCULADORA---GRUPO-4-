@@ -156,7 +156,7 @@ select.domicilio{
 
 
 select.domicilio:focus{
-    background-color: #484566;
+    background-color: #4845668c;
 }
 
 /* gasto mensual de KWH */
@@ -225,7 +225,7 @@ button:hover {
     text-decoration: none;
 }
 
-
+/* resultado */
 
 .resultado{
     display: grid;
