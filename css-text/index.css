@@ -12,7 +12,10 @@ body {
 
 
 
-main  {display: flex}
+main  {
+    overflow: hidden;
+    display: flex   
+}
 /*Info sobre los campos a validar*/
 
 .text{
