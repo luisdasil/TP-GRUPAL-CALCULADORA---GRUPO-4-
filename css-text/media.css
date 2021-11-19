@@ -1,6 +1,7 @@
 @media screen and (min-width: 200px) and (max-width: 480px){
     main{
         display: block;
+        overflow: hidden;
     }
 
 
@@ -9,6 +10,7 @@
         margin-right: auto;
         height: auto;
         width: auto;
+        
     }
 
 
