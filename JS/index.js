@@ -46,7 +46,7 @@ function calcular() {
         }
     }
     if(total > 102 && ((document.getElementById('radio-1').checked) || (document.getElementById('radio-2').checked))) {
-        return document.getElementById('resultado').innerHTML = total.toFixed(2);
+        return document.getElementById('resultado').innerHTML = "$"+total.toFixed(2);
     }
 }
 
